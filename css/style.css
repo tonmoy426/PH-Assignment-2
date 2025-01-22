@@ -31,11 +31,6 @@ body {
     font-size: 32px;
 }
 
-.navbar .logo span {
-    font-size: 20px;
-    font-weight: bold;
-}
-
 .navbar .menu {
     display: flex;
     gap: 20px;
@@ -44,12 +39,9 @@ body {
 .navbar .menu a {
     text-decoration: none;
     color: #333;
-    font-size: 16px;
+    font-size: 20px;
 }
 
-.navbar .menu a:hover {
-    color: #ffa500;
-}
 
 .navbar .contact {
     background-color: #ffa500;
