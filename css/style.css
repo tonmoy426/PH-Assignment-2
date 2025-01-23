@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
 
 body {
-    
+
     font-family: "Quicksand", serif;
     background-color: #f9f9f9;
     color: #333;
@@ -16,7 +16,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0px;
-    background-color:#f9f9f9;
+    background-color: #f9f9f9;
     width: 80%;
     margin: 0 auto;
 }
@@ -26,85 +26,258 @@ body {
     align-items: center;
 }
 
-.logo-text{
+.logo-text {
     width: 700;
     font-size: 32px;
 }
 
 .navbar .menu {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .navbar .menu a {
     text-decoration: none;
     color: #333;
     font-size: 20px;
+    font-weight: 700;
 }
 
+#home-color {
+    color: #ffa500;
+}
+
+#about-color {
+    color: skyblue;
+}
+
+#facility-color {
+    color: #05D4DF;
+}
+
+#admission-collor {
+    color: #5D58EF;
+}
 
 .navbar .contact {
+    font-family: "Quicksand", serif;
     background-color: #ffa500;
     color: #fff;
-    padding: 8px 16px;
-    border-radius: 4px;
+    padding: 15px 50px;
+    border-radius: 12px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    border-width: 0px;
 }
+.menu-button{
+    display: none;  
+    flex-direction: column;  
+    width: 30px; 
+    height: 20px;
+    cursor: pointer;  
+    
+  } 
+  .bar{
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0px;
+    
+  }
 
-.navbar .contact:hover {
-    background-color: #e69500;
-}
 
 /* Banner */
 .banner {
-    display: flex;
-    align-items: center;
+    /* display: flex;
+     */
+    display: grid;
+    grid-template-areas: "text image";
+    grid-template-columns: 1fr 0fr;
     justify-content: space-between;
-    padding: 40px 20px;
+    align-items: center;
+    padding: 0px 20px;
     background-color: #f9f9f9;
     width: 80%;
     margin: 0 auto;
 }
 
-.banner .text {
-    max-width: 50%;
-}
+
 
 .banner .text h1 {
-    font-size: 48px;
-    margin: 0;
-    line-height: 1.2;
+    font-size: 56px;
+    font-weight: 700;
 }
 
-.banner .text h1 span {
+.banner .text h1 div {
     color: #ffa500;
 }
 
+.banner .text h1 span {
+    color: rgb(21, 186, 251);
+}
+
 .banner .text p {
-    font-size: 18px;
-    margin: 20px 0;
+    font-size: 25px;
+    margin: 35px 0px;
+    font-weight: 400;
 }
 
 .banner .text .button {
     background-color: #000;
     color: #fff;
-    padding: 12px 24px;
+    padding: 15px 40px;
     text-decoration: none;
-    font-size: 18px;
-    border-radius: 4px;
+    font-size: 21px;
+    font-weight: 700;
+    border-radius: 12px;
 }
 
-.banner .text .button:hover {
-    background-color: #333;
-}
-
-.banner .image {
-    position: relative;
-}
 
 .banner .image img {
-    width: 350px;
+    width: 500px;
     border-radius: 20px;
+    ;
 }
 
+/* curriculum */
+.curriculum-bg{
+    background-image: url(../assets/bg.png);
+    padding-top: 60px;    
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.curriculum {
+    width: 80%;    
+    margin: 0 auto;
+
+}
+
+.curriculum h1 {
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.curriculum .cards {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    gap: 30px;
+    padding: 80px 0px;
+}
+
+.curriculum .card {
+    background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.curriculum .card:hover {
+    transform: translateY(-10px);
+}
+
+.curriculum .card img {
+    margin: 20px 0px;
+}
+
+.curriculum .card h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.curriculum .card p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.curriculum .card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.curriculum .card:nth-child(2) {
+    background: linear-gradient(to bottom, #fff7e0, #ffffff);
+}
+
+.curriculum .card:nth-child(3) {
+    background: linear-gradient(to bottom, #f7e0ff, #ffffff);
+}
+
+.curriculum .pagination {
+    justify-items: center;
+    margin-top: 20px;
+    margin-left: 50%;
+}
+
+.curriculum .pagination button {
+    background-color: #ffa500;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.curriculum .pagination button:hover {
+    background-color: #e69500;
+}
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+
+    .navbar h3{
+        display: none;
+    }
+    .navbar{
+        border-bottom: 1px solid #f8c15b; 
+        width: 90%;
+    }
+    .navbar .menu{
+        display: none;
+    }
+    .contact{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    
+      
+    .banner {
+        grid-template-areas:"text""image";
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .text{
+        order: 2;
+    }
+    .banner{
+        margin: 0px 0px;
+        padding: 10px 10px;
+    }
+    .banner .text h1 {
+        font-size: 46px;
+        font-weight: 700;
+    }
+    .curriculum .cards {
+        grid-template-columns: 1fr;
+    }
+}
